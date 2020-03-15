@@ -7,6 +7,7 @@ public class MyPlaceOnPlane : PlaceOnPlane
 {
     private bool _touchDetectionIsActive;
     private MyPlaneDetectionController _myPlaneDetectionController;
+    private SwipeController _swipeController;
 
     protected override void Awake()
     {
@@ -14,6 +15,7 @@ public class MyPlaceOnPlane : PlaceOnPlane
 
         this._touchDetectionIsActive = true;
         this._myPlaneDetectionController = GetComponent<MyPlaneDetectionController>();
+        this._swipeController = GetComponent<SwipeController>();
     }
 
     protected override void Update()
@@ -26,6 +28,7 @@ public class MyPlaceOnPlane : PlaceOnPlane
         if (spawnedObject != null)
         {
             ToggleTouchTrackingAndPlaneDetectionAndPointCloud();
+            this._swipeController.enabled = true;
         }
     }
 
