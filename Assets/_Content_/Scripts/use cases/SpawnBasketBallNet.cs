@@ -28,14 +28,15 @@ public class SpawnBasketBallNet : PlaceOnPlane
 
         if (spawnedObject != null)
         {
-            TogglePlaneDetectionAndPointCloud();
-            this.swipeControllerRepository.enableSwipeController();
+            TogglePlaneDetectionAndEnableSwipe();
         }
     }
 
-    public void TogglePlaneDetectionAndPointCloud()
+
+    public void TogglePlaneDetectionAndEnableSwipe()
     {
         this.firstTouchDetection = false;
         this.planeDetectionRepository.togglePlaneDetectionAndPointCloud();
+        this.swipeControllerRepository.enableSwipeController();
     }
 }

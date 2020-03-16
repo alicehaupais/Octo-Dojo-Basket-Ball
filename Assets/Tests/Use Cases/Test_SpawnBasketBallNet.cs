@@ -8,21 +8,38 @@ namespace Tests
 {
     public class Test_SpawnBasketBallNet
     {
-        // A Test behaves as an ordinary method
-        [Test]
-        public void TogglePlaneDetectionAndPointCloud()
+        private bool firstTouchDetection;
+        private PlaneDetectionRepository planeDetectionRepository;
+        private SwipeControllerRepository swipeControllerRepository;
+
+        private SpawnBasketBallNet spawnBasketBallNet;
+
+        private void SetUp()
         {
-            // Use the Assert class to test conditions
+            spawnBasketBallNet = new SpawnBasketBallNet(firstTouchDetection, planeDetectionRepository, swipeControllerRepository);
         }
 
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator NewTestScriptWithEnumeratorPasses()
+        [Test]
+        public void firstTouchDetectionSetToFalse()
         {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            yield return null;
+            spawnBasketBallNet.TogglePlaneDetectionAndEnableSwipeController();
+            Assert.isfalse(firstTouchDetection);
+        }
+
+        [Test]
+        public void verifyTogglePlaneDetectionWasCalled()
+        {
+            spawnBasketBallNet.TogglePlaneDetectionAndEnableSwipeController();
+            Mock.Get(planeDetectionRepository).Verify(x =>
+                x.togglePlaneDetectionAndPointCloud(), Times.Once);
+        }
+
+        [Test]
+        public void verifyEnableSwipeWasCalled()
+        {
+            spawnBasketBallNet.TogglePlaneDetectionAndEnableSwipeController();
+            Mock.Get(swipeControllerRepository).Verify(x =>
+                x.enableSwipeController, Times.Once);
         }
     }
 }
