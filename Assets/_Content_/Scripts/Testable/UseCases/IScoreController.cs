@@ -5,4 +5,6 @@
     void AddScore(int score);
 
     string GetScoreFromTextComponent();
+
+    void UpdateScoreFromTextComponent();
 }

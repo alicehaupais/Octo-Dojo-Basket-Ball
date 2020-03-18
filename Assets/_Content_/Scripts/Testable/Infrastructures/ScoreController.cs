@@ -47,7 +47,7 @@ public class ScoreController : MonoBehaviour, IScoreController
         return this.textComponent.text;
     }
 
-    private void UpdateScoreFromTextComponent()
+    public void UpdateScoreFromTextComponent()
     {
         this.textComponent.text = this.Score.ToString();
     }
