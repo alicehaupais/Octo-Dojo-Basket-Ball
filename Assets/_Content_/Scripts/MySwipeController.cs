@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using TouchScript;
 using TouchScript.Gestures;
 using TouchScript.Gestures.TransformGestures;
 using UnityEngine;
 
-public class SwipeController : MonoBehaviour
+public class MySwipeController : MonoBehaviour
 {
     public ScreenTransformGesture screenTransfromGesture;
     public FlickGesture flickGesture;
@@ -63,3 +60,5 @@ public class SwipeController : MonoBehaviour
         this.basketBallRigidbody.AddForce(direction3D / this.flickGesture.ScreenFlickTime);
     }
 }
+
+
