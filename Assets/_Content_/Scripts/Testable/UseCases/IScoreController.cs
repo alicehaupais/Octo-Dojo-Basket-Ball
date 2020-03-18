@@ -6,5 +6,5 @@
 
     string GetScoreFromTextComponent();
 
-    void UpdateScoreFromTextComponent();
+    void UpdateScoreOnTextComponent();
 }

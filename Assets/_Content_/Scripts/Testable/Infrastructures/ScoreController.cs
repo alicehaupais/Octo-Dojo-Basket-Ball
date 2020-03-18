@@ -30,7 +30,7 @@ public class ScoreController : MonoBehaviour, IScoreController
         if (this.LastScore != this.Score)
         {
             this.LastScore = this.Score;
-            UpdateScoreFromTextComponent();
+            UpdateScoreOnTextComponent();
         }
     }
 
@@ -47,7 +47,7 @@ public class ScoreController : MonoBehaviour, IScoreController
         return this.textComponent.text;
     }
 
-    public void UpdateScoreFromTextComponent()
+    public void UpdateScoreOnTextComponent()
     {
         this.textComponent.text = this.Score.ToString();
     }
