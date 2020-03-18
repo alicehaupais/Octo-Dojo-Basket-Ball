@@ -34,14 +34,13 @@ namespace Tests
         {
             scoreTextGameObject = new GameObject();
             scoreTextGameObject.AddComponent<Text>();
+            scoreController = scoreTextGameObject.AddComponent<ScoreController>();
         }
 
         [UnityTest]
         public IEnumerator Test_ScoreTextIsUpdatedWhenScoreChange()
         {
-            // given
-            ScoreController scoreController = scoreTextGameObject.AddComponent<ScoreController>();
-            yield return null;
+            // given SetUp
 
             // when
             scoreController.AddScore(1);
