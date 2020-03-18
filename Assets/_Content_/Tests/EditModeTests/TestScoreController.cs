@@ -31,10 +31,10 @@ namespace Tests
         public void Test_ScoreIsInitializedAtZero()
         {
             // given
-            ScoreController scoreController = null;
+            GameObject gameObject = new GameObject();
 
             // when
-            scoreController = new ScoreController();
+            ScoreController scoreController = gameObject.AddComponent<ScoreController>();
 
             // then
             Assert.AreEqual(0, scoreController.Score);
@@ -44,7 +44,8 @@ namespace Tests
         public void Test_ScoreCannotBeInferiorToZero()
         {
             // given
-            ScoreController scoreController = new ScoreController();
+            GameObject gameObject = new GameObject();
+            ScoreController scoreController = gameObject.AddComponent<ScoreController>();
 
             // when
             scoreController.AddScore(-1);
