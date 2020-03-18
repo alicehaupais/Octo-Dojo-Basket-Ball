@@ -12,6 +12,7 @@ public class MySwipeController : MonoBehaviour
 
     private GameObject basketBall;
     private Rigidbody basketBallRigidbody;
+    private ScoringController basketBallScoringController;
 
     private void OnEnable()
     {
@@ -34,6 +35,11 @@ public class MySwipeController : MonoBehaviour
 
         if (this.basketBallRigidbody == null)
             this.basketBallRigidbody = this.basketBall.GetComponent<Rigidbody>();
+
+        if (this.basketBallScoringController == null)
+            this.basketBallScoringController = this.basketBallScoringController.GetComponent<ScoringController>();
+
+        this.basketBallScoringController.ResetColliderNames();
 
         this.basketBallRigidbody.useGravity = false;
         this.basketBallRigidbody.velocity = Vector3.zero;

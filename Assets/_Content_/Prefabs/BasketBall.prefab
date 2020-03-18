@@ -87,7 +87,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 717838928033020446}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8c1193c079cfb44659857f8acdfddd88, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -103,6 +103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8944873993734873005}
   - component: {fileID: 65240846}
+  - component: {fileID: -4088953046349575857}
   m_Layer: 0
   m_Name: BasketBall
   m_TagString: Untagged
@@ -141,3 +142,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-4088953046349575857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828694344341901244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6beee47f2245f493c82de8758e87722d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

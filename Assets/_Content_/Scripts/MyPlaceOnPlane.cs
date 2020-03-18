@@ -2,6 +2,7 @@
 
 public class MyPlaceOnPlane : PlaceOnPlane
 {
+    public Button resetButton;
     public Text scoreText;
 
     private bool _touchDetectionIsActive;
@@ -29,8 +30,11 @@ public class MyPlaceOnPlane : PlaceOnPlane
             ToggleTouchTrackingAndPlaneDetectionAndPointCloud();
             this._swipeController.enabled = true;
 
+            if (this.resetButton != null)
+                this.resetButton.gameObject.SetActive(false);
+
             if (this.scoreText != null)
-                this.scoreText.enabled = true;
+                this.scoreText.gameObject.SetActive(true);
         }
     }
 

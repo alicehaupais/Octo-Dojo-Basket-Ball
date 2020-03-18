@@ -6,13 +6,13 @@ public class ScoreController : MonoBehaviour, IScoreController
 {
     public int Score { get; private set; }
 
-    private int LastScore { get; set; }
+    private int lastScore;
     private Text textComponent;
 
     public ScoreController()
     {
         this.Score = 0;
-        this.LastScore = 0;
+        this.lastScore = 0;
     }
 
     public void Awake()
@@ -27,9 +27,9 @@ public class ScoreController : MonoBehaviour, IScoreController
 
     public void Update()
     {
-        if (this.LastScore != this.Score)
+        if (this.lastScore != this.Score)
         {
-            this.LastScore = this.Score;
+            this.lastScore = this.Score;
             UpdateScoreOnTextComponent();
         }
     }
