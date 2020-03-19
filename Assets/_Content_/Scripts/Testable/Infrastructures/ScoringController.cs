@@ -14,7 +14,7 @@ public class ScoringController : MonoBehaviour, IScoringController
 
     public void Start()
     {
-        scoreController = GameObject.Find("Score Text").GetComponent<ScoreController>();
+        scoreController = GameObject.Find("Score Number Text").GetComponent<ScoreController>();
     }
 
     public void Update()

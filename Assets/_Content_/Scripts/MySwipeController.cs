@@ -37,7 +37,7 @@ public class MySwipeController : MonoBehaviour
             this.basketBallRigidbody = this.basketBall.GetComponent<Rigidbody>();
 
         if (this.basketBallScoringController == null)
-            this.basketBallScoringController = this.basketBallScoringController.GetComponent<ScoringController>();
+            this.basketBallScoringController = this.basketBall.GetComponent<ScoringController>();
 
         this.basketBallScoringController.ResetColliderNames();
 

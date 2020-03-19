@@ -94,7 +94,7 @@ namespace Tests
             yield return null;
 
             GameObject basketBall = GameObject.Find("BasketBall");
-            GameObject scoreText = GameObject.Find("Score Text");
+            GameObject scoreText = GameObject.Find("Score Number Text");
             ScoreController scoreController = scoreText.GetComponent<ScoreController>();
 
             // when
@@ -113,7 +113,7 @@ namespace Tests
             yield return null;
 
             GameObject basketBall = GameObject.Find("BasketBall");
-            GameObject scoreText = GameObject.Find("Score Text");
+            GameObject scoreText = GameObject.Find("Score Number Text");
             ScoreController scoreController = scoreText.GetComponent<ScoreController>();
 
             // when
